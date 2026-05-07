@@ -5,10 +5,6 @@
 O **Simulador de Paginação** é um sistema criado para demonstrar visualmente o funcionamento dos principais algoritmos de gerenciamento de memória utilizados em Sistemas Operacionais.  
 O projeto foi desenvolvido com interface gráfica utilizando **Java Swing**, permitindo comparar a quantidade de faltas de página entre diferentes algoritmos.
 
-<p align="center">
-  <img src="assets/tela.png" alt="Tela do simulador de paginação" width="900">
-</p>
-
 ---
 
 # Tecnologias Utilizadas
@@ -83,7 +79,7 @@ Certifique-se de que o JDK está configurado corretamente.
 Localize a classe principal:
 
 ```bash
-Tela.java
+Main.java
 ```
 
 Execute o projeto pela IDE.
@@ -149,18 +145,13 @@ Remove a página que demorará mais tempo para ser utilizada novamente.
 
 ---
 
-# Autor
+# Autora
 
-Seu Nome  
+Ana Beatriz Silveira Mendes - Matricula: 2410411
+
 Curso de Ciência da Computação
 
----
 
-# Licença
-
-Projeto desenvolvido exclusivamente para fins acadêmicos.
-
----
 
 [Java.com]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
 [Java-url]: https://www.java.com/
