@@ -55,13 +55,13 @@ Siga os passos abaixo para executar o simulador no seu computador.
 Abra o terminal e execute:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+https://github.com/abeatrizsm/Projeto-Sistemas-Operacionais.git
 ```
 
 Entre na pasta do projeto:
 
 ```bash
-cd nome-do-projeto
+cd "Trabalho AV2"
 ```
 
 ---
