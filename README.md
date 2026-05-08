@@ -3,9 +3,6 @@
 
 Ana Beatriz Silveira Mendes - Matricula: 2410411
 
-Curso de Ciência da Computação
-
-
 ## Repositório GitHub
 ```txt
 https://github.com/abeatrizsm/Projeto-Sistemas-Operacionais.git
@@ -13,7 +10,7 @@ https://github.com/abeatrizsm/Projeto-Sistemas-Operacionais.git
 ---
 # Resumo
 
-O presente trabalho apresenta o desenvolvimento de um simulador de algoritmos de substituição de páginas, utilizado para analisar o comportamento da memória virtual em sistemas operacionais. O sistema foi implementado na linguagem Java utilizando Java Swing para construção da interface gráfica. Foram implementados os algoritmos FIFO, LRU, Clock e Ótimo, permitindo comparar a quantidade de faltas de página geradas em diferentes cenários de execução. O simulador fornece uma análise visual e comparativa entre os algoritmos, destacando vantagens, desvantagens e eficiência de cada abordagem. Os resultados demonstraram diferenças significativas entre os métodos, evidenciando como a estratégia de substituição influencia diretamente o desempenho do gerenciamento de memória.
+Este trabalho apresenta o desenvolvimento de um simulador de algoritmos de substituição de páginas, utilizado para analisar o comportamento da memória virtual em sistemas operacionais. O sistema foi implementado na linguagem Java utilizando Java Swing para construção da interface gráfica. Foram implementados os algoritmos FIFO, LRU, Clock e Ótimo, permitindo comparar a quantidade de faltas de página geradas em diferentes cenários de execução. Os resultados demonstraram diferenças significativas entre os métodos, evidenciando como a estratégia de substituição influencia diretamente o desempenho do gerenciamento de memória.
 
 ---
 
@@ -31,70 +28,61 @@ O objetivo deste trabalho foi desenvolver um simulador capaz de executar esses a
 
 # Metodologia
 
-O projeto foi desenvolvido utilizando a linguagem Java juntamente com a biblioteca Swing para construção da interface gráfica.
+O projeto foi desenvolvido utilizando a linguagem Java juntamente com Swing para construção da interface gráfica.
 
 A aplicação permite ao usuário:
-- inserir uma sequência de páginas;
-- definir a quantidade de frames disponíveis;
-- executar a simulação;
-- visualizar os resultados numéricos;
-- analisar gráficos comparativos entre os algoritmos.
+- inserir uma sequência de páginas
+- definir a quantidade de frames disponíveis
+- executar a simulação
+- visualizar os resultados numéricos
+- analisar gráficos comparativos entre os algoritmos
 
 O sistema foi organizado em pacotes separados para melhor organização:
-- `algoritmos`: implementação dos algoritmos;
-- `gui`: interface gráfica;
-- `util`: processamento das entradas.
+- `algoritmos`: implementação dos algoritmos
+- `gui`: interface gráfica
+- `util`: processamento das entradas
 
 Foram implementados os seguintes algoritmos:
-
----
 
 ## FIFO (First In First Out)
 
 O algoritmo FIFO remove da memória a página que foi carregada primeiro.
 
 ### Vantagens
-- Simples de implementar;
-- Baixo custo computacional;
+- Simples de implementar
+- Baixo custo computacional
 - Fácil entendimento.
 
 ### Desvantagens
-- Não considera frequência ou uso recente;
-- Pode remover páginas muito utilizadas;
+- Não considera frequência ou uso recente
+- Pode remover páginas muito utilizadas
 - Pode apresentar maior quantidade de faltas de página.
-
----
 
 ## LRU (Least Recently Used)
 
 O algoritmo LRU remove a página menos utilizada recentemente, considerando o histórico de acessos.
 
 ### Vantagens
-- Melhor aproveitamento da localidade de referência;
-- Geralmente apresenta menor número de faltas de página;
-- Mais eficiente em cenários reais.
+- Geralmente apresenta menor número de faltas de página
+- Mais eficiente em cenários reais
 
 ### Desvantagens
-- Implementação mais complexa;
-- Maior custo computacional;
-- Necessita controle constante dos acessos.
-
----
+- Implementação mais complexa
+- Maior custo computacional
+- Necessita controle constante dos acessos
 
 ## Clock
 
 O algoritmo Clock utiliza bits de referência para aproximar o comportamento do LRU utilizando menor custo computacional.
 
 ### Vantagens
-- Mais eficiente que FIFO;
-- Menor custo que o LRU;
-- Muito utilizado em sistemas operacionais reais.
+- Mais eficiente que FIFO
+- Menor custo que o LRU
+- Muito utilizado em sistemas operacionais reais
 
 ### Desvantagens
-- Não é tão preciso quanto o LRU;
-- Pode manter páginas pouco utilizadas por mais tempo.
-
----
+- Não é tão preciso quanto o LRU
+- Pode manter páginas pouco utilizadas por mais tempo
 
 ## Ótimo (Simulação Teórica)
 
@@ -103,12 +91,12 @@ O algoritmo Ótimo remove a página que demorará mais tempo para ser utilizada 
 > Este algoritmo foi utilizado apenas como simulação teórica e comparativa, pois sua implementação em sistemas reais é inviável devido à necessidade de conhecimento prévio das futuras referências de memória.
 
 ### Vantagens
-- Produz o menor número possível de faltas de página;
-- Serve como referência ideal de desempenho.
+- Produz o menor número possível de faltas de página
+- Serve como referência ideal de desempenho
 
 ### Desvantagens
-- Não implementável na prática;
-- Depende do conhecimento futuro das referências de páginas.
+- Não implementável na prática
+- Depende do conhecimento futuro das referências de páginas (e ainda não é possivel prever o futuro)
 
 ---
 # Resultados e Discussão
@@ -116,8 +104,6 @@ O algoritmo Ótimo remove a página que demorará mais tempo para ser utilizada 
 Após a implementação do simulador, foram realizados testes utilizando diferentes sequências de páginas e quantidades de frames para comparar o desempenho dos algoritmos FIFO, LRU, Clock e Ótimo.
 
 Os resultados apresentados abaixo foram obtidos diretamente através da execução do sistema desenvolvido.
-
----
 
 ## Caso de Teste 1
 
@@ -144,8 +130,6 @@ Quantidade de frames:
 
 Neste cenário, o algoritmo Ótimo apresentou o melhor desempenho, produzindo a menor quantidade de faltas de página. O FIFO e o Clock obtiveram resultados semelhantes, enquanto o LRU apresentou maior número de faltas devido ao padrão específico da sequência utilizada.
 
----
-
 ## Caso de Teste 2
 
 Sequência utilizada:
@@ -170,8 +154,6 @@ Quantidade de frames:
 ### Análise
 
 Neste caso, os algoritmos LRU, Clock e Ótimo apresentaram o mesmo desempenho. O FIFO apresentou apenas uma falta de página a mais, demonstrando desempenho relativamente próximo aos demais algoritmos.
-
----
 
 ## Caso de Teste 3
 
@@ -198,8 +180,6 @@ Quantidade de frames:
 
 Neste cenário, o LRU apresentou desempenho equivalente ao algoritmo Ótimo, aproveitando corretamente a frequência de reutilização da página 1. O FIFO e o Clock apresentaram maior número de faltas de página.
 
----
-
 ## Caso de Teste 4
 
 Sequência utilizada:
@@ -224,8 +204,6 @@ Quantidade de frames:
 ### Análise
 
 O algoritmo LRU apresentou melhor desempenho entre os algoritmos implementáveis, pois conseguiu manter na memória páginas utilizadas recentemente. O FIFO apresentou o maior número de faltas devido à sua política simples de substituição.
-
----
 
 ## Caso de Teste 5
 
@@ -265,6 +243,8 @@ O LRU demonstrou melhor desempenho em boa parte dos testes, principalmente em se
 O Clock apresentou resultados próximos ao LRU em vários cenários, mostrando-se uma alternativa eficiente com menor custo computacional.
 
 Já o algoritmo Ótimo apresentou consistentemente os melhores resultados, sendo utilizado como referência teórica ideal para comparação dos demais algoritmos.
+
+
 ---
 
 # Conclusão
@@ -277,22 +257,6 @@ O FIFO apresentou implementação simples, porém menor eficiência em alguns ce
 
 Além de auxiliar no aprendizado acadêmico, o projeto possibilitou compreender conceitos fundamentais relacionados à memória virtual, gerenciamento de páginas e faltas de página em sistemas operacionais.
 
----
-
-# Tecnologias Utilizadas
-
-O sistema foi desenvolvido utilizando **Java** com interface gráfica em **Swing**, seguindo organização em pacotes para separação da lógica dos algoritmos e da interface.
-
-[![Java][Java.com]][Java-url]
-[![Swing][Swing.com]][Swing-url]
-
-### Funcionalidades implementadas:
-- Simulação do algoritmo **FIFO**
-- Simulação do algoritmo **LRU**
-- Simulação do algoritmo **Clock**
-- Simulação do algoritmo **Ótimo**
-- Comparação de faltas de página
-- Exibição gráfica dos resultados
 
 ---
 
@@ -309,13 +273,7 @@ java -version
 ```
 
 - **IDE Java**
-  - IntelliJ IDEA
-  - Eclipse
-  - NetBeans
-  - VSCode com extensão Java
-
-- **Git instalado** (opcional)
-
+  > a IDE usada foi o Intellij IDEA
 ---
 
 # Instalação e Execução do Projeto
@@ -327,7 +285,7 @@ Siga os passos abaixo para executar o simulador no seu computador.
 Abra o terminal e execute:
 
 ```bash
-https://github.com/abeatrizsm/Projeto-Sistemas-Operacionais.git
+git clone https://github.com/abeatrizsm/Projeto-Sistemas-Operacionais.git
 ```
 
 Entre na pasta do projeto:
